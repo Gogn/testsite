@@ -1,0 +1,74 @@
+@import "bootstrap";
+@import "bootstrap-responsive";
+
+html {
+  overflow-y: scroll; /* Динамическое масштабирование */
+  text-shadow: gray 0px 1px 0px; /* Тени */
+}
+
+body {
+  padding-top: 60px; /* Отступ от верхней части */
+}
+
+section {
+  overflow: auto; /* тображением содержания блочного элемента, если оно целиком не помещается и выходит за область заданных размеров */
+}
+
+
+textarea {
+  resize: vertical; /* Указывает, можно ли пользователю изменять размеры текстового поля */
+}  
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #FFCC66;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  padding-left: 60px;
+  padding-right: 60px;
+  border-top: 1px solid #eaeaea;
+  color: #999;
+}
+
+footer a {
+  color: #555;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 10px;
+}

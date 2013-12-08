@@ -1,0 +1,21 @@
+<%= form_tag do %>
+  <fieldset>
+    <legend>Авторизуйтесь для начала тестирования</legend>
+
+      <div>
+        <%= label_tag :name, 'Логин' %>
+        <%= text_field_tag :name, params[:name] %>
+      </div>
+
+      <div>
+        <%= label_tag :password, 'Пароль:' %>
+        <%= password_field_tag :password, params[:password] %>
+      </div>
+
+      <div>
+        <%= submit_tag ("login") %>
+      </div>
+    </fieldset>
+<% end %>
+<% @n=1 %>
+<%= button_to 'Назад', main_home_path, :method=> "get" %>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Online Testing</title>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <header class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <%= link_to "main", '#', id: "logo" %>
+          <nav>
+            <ul class="nav pull-right">
+              <li><%= link_to "Home",    '#' %></li>
+              <li><%= link_to "help",    '#' %></li>
+              <li><%= link_to "login", '#' %></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+    <center>
+        <p style="color: red"> <%= flash[:error] %> </p>
+        <p style="color: green"> <%= flash[:success] %> </p>
+      <%= yield %>
+    </center>
+    </div>
+
+    <footer class="footer">
+  <small>
+    Create and designed by Roman on Ruby on Rails
+  </small>
+  <nav>
+    <ul>
+      <li><%= link_to "help",   '#' %></li>
+    </ul>
+  </nav>
+</footer>
+  </body>
+</html>

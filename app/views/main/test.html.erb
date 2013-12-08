@@ -1,0 +1,24 @@
+        <%= form_for @quests, :url => { :action => 'nextquest', :answer => @answer, :id => @id }, :method => :put do |q| %>
+  <h2> Вопрос #<%= @quests.id %> </h2>
+<div>
+  <h3>  <%= @quests.question %> </h3>
+      </br>
+    <%= radio_button_tag(:answer, "#{@quests.answer1}")  %> 
+    <%= label_tag(:answer_1, "#{@quests.answer1}") %>
+      </br>      </br>
+    <%= radio_button_tag(:answer, "#{@quests.answer2}") %>
+    <%= label_tag(:answer_2, "#{@quests.answer2}") %>
+      </br>      </br>
+    <%= radio_button_tag(:answer, "#{@quests.answer3}") %>
+    <%= label_tag(:answer_3, "#{@quests.answer3}") %>
+      </br>      </br>
+    <%= radio_button_tag(:answer, "#{@quests.answer4}") %>
+    <%= label_tag(:answer_4, "#{@quests.answer4}") %>
+      </br>   </br>  
+</div>
+	<div>
+		<h4> У вас <%= @user.result %> правильных ответов. </h4>
+	</div>
+<%= q.submit 'Далее' %>
+ <%end%>
+<h3><%= link_to "Закончить тестирование", controller: "main", action: "home", :confirm => 'Уверены?' %> </h>

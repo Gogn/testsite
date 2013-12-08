@@ -1,0 +1,23 @@
+ <h2> Вопрос #<%= @quests.id %> </h2>
+
+  <h3>  <%= @quests.question %> </h3>
+      </br>
+    <%= radio_button_tag(:answer, "hi")  %>
+    <%= label_tag(:answer_1, "#{@quests.answer1}") %>
+      </br>      </br>
+    <%= radio_button_tag(:answer, "hi") %>
+    <%= label_tag(:answer_2, "#{@quests.answer2}") %>
+      </br>      </br>
+    <%= radio_button_tag(:answer, "hi") %>
+    <%= label_tag(:answer_3, "#{@quests.answer3}") %>
+      </br>      </br>
+    <%= radio_button_tag(:answer, "hi") %>
+    <%= label_tag(:answer_4, "#{@quests.answer4}") %>
+      </br>   </br>
+
+<%= link_to 'Submit', {:controller=>"main", :action=>"next_quest"} %>
+<h3><%= link_to "Закончить тестирование", controller: "main", action: "home", :confirm => 'Уверены?' %> </h>
+<h3><%= link_to "тестирование", controller: "main", action: "next_quest", answer: answer%> </h>
+
+<% form_for :main, @quests, :url => <%= form_for (@quests) do |q| %>
+main_nextquest_path(@quests), :method => :get %>

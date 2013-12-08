@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @quest.question %>
+</p>
+
+<p>
+  <strong>Answer1:</strong>
+  <%= @quest.answer1 %>
+</p>
+
+<p>
+  <strong>Answer2:</strong>
+  <%= @quest.answer2 %>
+</p>
+
+<p>
+  <strong>Answer3:</strong>
+  <%= @quest.answer3 %>
+</p>
+
+<p>
+  <strong>Answer4:</strong>
+  <%= @quest.answer4 %>
+</p>
+
+<p>
+  <strong>Truequest:</strong>
+  <%= @quest.truequest %>
+</p>
+
+<%= link_to 'Edit', edit_quest_path(@quest) %> |
+<%= link_to 'Back', quests_path %>

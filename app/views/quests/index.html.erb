@@ -1,0 +1,37 @@
+<h1>Listing quests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Answer1</th>
+      <th>Answer2</th>
+      <th>Answer3</th>
+      <th>Answer4</th>
+      <th>Truequest</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quests.each do |quest| %>
+      <tr>
+        <td><%= quest.question %></td>
+        <td><%= quest.answer1 %></td>
+        <td><%= quest.answer2 %></td>
+        <td><%= quest.answer3 %></td>
+        <td><%= quest.answer4 %></td>
+        <td><%= quest.truequest %></td>
+        <td><%= link_to 'Show', quest %></td>
+        <td><%= link_to 'Edit', edit_quest_path(quest) %></td>
+        <td><%= link_to 'Destroy', quest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Quest', new_quest_path %>

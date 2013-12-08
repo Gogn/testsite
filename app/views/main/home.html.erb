@@ -1,0 +1,19 @@
+<% if session[:name] %>
+<div class="center hero-unit">
+  <h3>Онлайн тестирование</h3>
+ <h4><p style="color: blue;"><i><%= "Вы в системе как #{session[:name]}" %> </p></h></i>
+<%= button_to('Начать тестирование!', main_test_path, :class => 'btn btn-large btn-primary', :method => "put")  %>
+</div>
+
+<% end %>
+
+</br>
+<%= button_to 'Войти', main_login_path, :method=> "get" %>
+<%= button_to 'Выйти', main_logout_path, :data => { :confirm => 'Уверены?'}, :method=> "get" %>
+
+</br>  </br>
+<%= link_to "Редактирование пользователей", controller: "users", action: "index"%>
+</br>
+<%= link_to "Редактирование вопросов", controller: "quests", action: "index" %>
+</br>
+<%= link_to "About", controller: "main", action: "help" %>
